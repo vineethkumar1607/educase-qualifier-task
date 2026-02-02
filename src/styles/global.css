@@ -1,13 +1,22 @@
+/* ------------------------------
+   Global Reset & Base Styles
+--------------------------------*/
 * {
   box-sizing: border-box;
-  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
 body {
-  margin: 0;
   background: #f2f2f2;
+  color: #000;
 }
 
+/* ------------------------------
+   Layout
+--------------------------------*/
 .page {
   display: flex;
   justify-content: center;
@@ -18,4 +27,180 @@ body {
   min-height: 100vh;
   background: #ffffff;
   padding: 24px;
+}
+
+/* ------------------------------
+   Welcome Screen
+--------------------------------*/
+.welcome {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.welcome-text h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.welcome-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #8f8f8f;
+}
+
+/* ------------------------------
+   Buttons
+--------------------------------*/
+.welcome-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #6c25ff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #5b1ee0;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #e3d7ff;
+  color: #000000;
+}
+
+.btn-secondary:hover {
+  background-color: #d6c6ff;
+}
+
+/* ------------------------------
+   Accessibility
+--------------------------------*/
+button:focus-visible {
+  outline: 2px solid #6c25ff;
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+
+/* ------------------------------
+   Login Screen
+--------------------------------*/
+.login {
+  min-height: calc(100vh - 48px);
+}
+
+.login-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: #8f8f8f;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* ------------------------------
+   Form
+--------------------------------*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6c25ff;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.form-group input:focus-visible {
+  outline: 2px solid #6c25ff;
+  outline-offset: 1px;
+}
+
+/* ------------------------------
+   Disabled Button
+--------------------------------*/
+.btn-disabled {
+  background-color: #d3d3d3;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+
+/* ------------------------------
+   Outlined Floating Input
+--------------------------------*/
+.form-group.outlined {
+  position: relative;
+}
+
+.form-group.outlined label {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background: #ffffff;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c25ff;
+  z-index: 1;
+}
+
+.form-group.outlined input {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  background: transparent;
+}
+
+.form-group.outlined input::placeholder {
+  color: #b0b0b0;
+}
+
+.form-group.outlined input:focus-visible {
+  outline: 2px solid #6c25ff;
+  outline-offset: 1px;
 }
