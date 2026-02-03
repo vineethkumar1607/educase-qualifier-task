@@ -62,6 +62,7 @@ body {
 }
 
 .btn {
+  width: 100%;
   border: none;
   border-radius: 8px;
   padding: 14px;
@@ -203,4 +204,69 @@ button:active {
 .form-group.outlined input:focus-visible {
   outline: 2px solid #6c25ff;
   outline-offset: 1px;
+}
+
+
+
+/* ------------------------------
+   Register Screen
+--------------------------------*/
+.register {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+}
+
+.register-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------
+   Register Form
+--------------------------------*/
+.register-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.required {
+  color: #e63946;
+  margin-left: 2px;
+}
+
+/* ------------------------------
+   Register CTA (Bottom Button)
+--------------------------------*/
+.register-cta {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* ------------------------------
+   Agency Radio Buttons
+--------------------------------*/
+.agency-section p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 24px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #6c25ff;
 }
