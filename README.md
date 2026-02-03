@@ -2,6 +2,9 @@
 
 ## 1. Assignment Overview
 
+**Live Demo:** https://educase-qualifier-task.vercel.app/account
+**GitHub Repository:** https://github.com/vineethkumar1607/educase-qualifier-task
+
 This document describes the implementation of the **React JS Qualifier Task** provided as part of the interview process. The objective of the assignment is to convert the given **Adobe XD mobile UI design** into a functional React application and host it on a public platform.
 
 The application focuses on **UI accuracy, navigation flow, and clean code structure**, as explicitly mentioned in the assignment instructions.
@@ -55,7 +58,7 @@ The scope has been intentionally limited to align strictly with the assignment i
 
 
 
-##\\ 5. Project Structure
+## 5. Project Structure
 
 src/
  ├─ components/
@@ -71,7 +74,6 @@ src/
  │   └─ global.css
  ├─ App.jsx
  └─ main.jsx
-```
 
 
 This structure ensures clear separation of layout, screens, routing, and styles.
@@ -173,19 +175,11 @@ Basic accessibility best practices applied within assignment scope:
 
 ## 11. Deployment Plan
 
-- Build generated using Vite
-- Application to be deployed on **Vercel**
-- Public GitHub repository linked with deployment
+- Deployed on Vercel
+- Live URL: https://educase-qualifier-task.vercel.app/account
+- GitHub Repository: https://github.com/vineethkumar1607/educase-qualifier-task
 
-
-## 12. Pending Tasks
-
-- Final UI review against Adobe XD
-- Deployment to hosting platform
-- README update with live URL
-
-
-## 13. Conclusion
+## 12. Conclusion
 
 This implementation focuses on accurately fulfilling the qualifier task by prioritizing UI correctness, navigation flow, and clean React code. The project is intentionally scoped to match the expectations of the assignment and avoid unnecessary over-engineering.
 
