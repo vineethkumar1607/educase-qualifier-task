@@ -13,7 +13,7 @@ export default function Welcome() {
   return (
     <MobileLayout>
       {/* Main content wrapper for accessibility */}
-      <main className="welcome">
+      <main className="welcome screen-padding">
         {/* Intro text section */}
         <section className="welcome-text">
           <h1>Welcome to PopX</h1>

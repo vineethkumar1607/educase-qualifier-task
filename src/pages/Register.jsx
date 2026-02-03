@@ -34,13 +34,20 @@ export default function Register() {
    * No real validation/authentication required as per assignment
    */
   const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/account");
-  };
+  e.preventDefault();
+
+  navigate("/account", {
+    state: {
+      name: formData.fullName,
+      email: formData.email,
+    },
+  });
+};
+
 
   return (
     <MobileLayout>
-      <main className="register">
+      <main className="register screen-padding">
         {/* Header */}
         <section className="register-header">
           <h1>Create your PopX account</h1>

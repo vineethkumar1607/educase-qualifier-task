@@ -4,36 +4,41 @@ import MobileLayout from "../components/MobileLayout";
 
 /**
  * Login Screen
- * - Allows user to enter email & password
- * - Login button remains disabled until both fields are filled
- * - Navigation-only (no real authentication)
+ *
+ * - UI-only login flow as per assignment
+ * - Collects email/password and navigates to Account screen
+ * - Uses route state to pass user information
  */
 export default function Login() {
   const navigate = useNavigate();
 
-  // Local state for form inputs
+  // Local form state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Button enabled only when both fields have values
-  const isFormValid = email.trim() !== "" && password.trim() !== "";
+  // Basic form validity check (UI-only)
+  const isFormValid = email.trim() && password.trim();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Fake login → navigate to Account screen
-    if (isFormValid) {
-      e.preventDefault();
+    if (!isFormValid) return;
 
-      if (!email.trim() || !password.trim()) return;
-      navigate("/account");
-    }
+    /**
+     * Navigate to Account screen with temporary user data.
+     * This avoids global state for a simple UI-only flow.
+     */
+    navigate("/account", {
+      state: {
+        name: email.split("@")[0], // derived name for demo purposes
+        email,
+      },
+    });
   };
 
   return (
     <MobileLayout>
-      <main className="login">
-        {/* Heading section */}
+      <main className="login screen-padding">
         <section className="login-header">
           <h1>Signin to your PopX account</h1>
           <p>
@@ -43,9 +48,7 @@ export default function Login() {
           </p>
         </section>
 
-        {/* Login form */}
         <form className="login-form" onSubmit={handleSubmit}>
-          {/* Email Field */}
           <div className="form-group outlined">
             <label htmlFor="email">Email Address</label>
             <input
@@ -58,8 +61,6 @@ export default function Login() {
             />
           </div>
 
-
-          {/* Password Field */}
           <div className="form-group outlined">
             <label htmlFor="password">Password</label>
             <input
@@ -72,13 +73,10 @@ export default function Login() {
             />
           </div>
 
-
-          {/* Login Button */}
           <button
             type="submit"
             className={`btn ${isFormValid ? "btn-primary" : "btn-disabled"}`}
             disabled={!isFormValid}
-            aria-disabled={!isFormValid}
           >
             Login
           </button>
