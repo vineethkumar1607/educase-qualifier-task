@@ -55,7 +55,7 @@ The scope has been intentionally limited to align strictly with the assignment i
 
 
 
-## 5. Project Structure
+##\\ 5. Project Structure
 
 src/
  ├─ components/
@@ -73,89 +73,119 @@ src/
  └─ main.jsx
 ```
 
-This structure ensures separation of concerns and improves maintainability.
+
+This structure ensures clear separation of layout, screens, routing, and styles.
+
 
 ## 6. Application Screens Implemented
 
 ### 6.1 Welcome Screen
 
 **Purpose:**
-
-* Acts as the entry point of the application
-* Provides navigation options to Register and Login screens
+- Entry point of the application
+- Provides navigation options to Register and Login screens
 
 **Key Features:**
+- Mobile-centered layout
+- Primary and secondary CTA buttons
+- Client-side navigation using React Router
 
-* Mobile‑centered layout
-* Primary and secondary CTA buttons
-* Client‑side navigation
 
 ### 6.2 Login Screen
 
 **Purpose:**
-
-* Allows users to enter login credentials
+- Allows users to enter login credentials
 
 **Key Features:**
+- Email and password input fields
+- Outlined input design with persistent labels
+- Login button disabled until required fields are filled
+- Navigation to Account screen on submit
+- User data passed via route state (UI-only behavior)
 
-* Email and password input fields
-* Outlined input design with persistent labels
-* Login button disabled until required fields are filled
-* Navigation to Account screen on submit
+
+### 6.3 Register Screen
+
+**Purpose:**
+- Allows users to create a new account (UI-only)
+
+**Key Features:**
+- Multiple input fields matching the design
+- Required field indicators
+- Radio button selection for agency type
+- Bottom-pinned primary CTA button
+- Navigation to Account screen on submit
+
+
+### 6.4 Account Settings Screen
+
+**Purpose:**
+- Displays logged-in user’s profile information
+
+**Key Features:**
+- Full-width white header
+- Grey content background matching the design
+- Profile card with avatar and edit indicator
+- User data consumed from route state
+- Layout strictly follows container and padding rules
 
 
 ## 7. UI & Styling Approach
 
-* Mobile viewport width fixed to **375px**
-* Centered layout for desktop view
-* Reusable button styles
-* Outlined input pattern matching the design
-* Consistent typography and spacing
+- Mobile viewport width fixed to **375px**
+- Mobile container centered on desktop view
+- Light grey application background
+- White content areas for cards and headers
+- Reusable button and form styles
+- Outlined input pattern as per Adobe XD design
 
-The UI has been implemented to closely match the Adobe XD design.
+All styling decisions were made to closely match the provided design.
 
 
 ## 8. Accessibility Considerations
 
-Basic accessibility best practices have been applied:
+Basic accessibility best practices applied within assignment scope:
 
-* Semantic HTML elements (`main`, `section`, `form`, `label`)
-* Proper label‑input associations
-* Keyboard navigable inputs and buttons
-* Visible focus states
-* Sufficient color contrast
+- Semantic HTML elements (`main`, `section`, `header`, `form`, `label`)
+- Proper label-input associations
+- Keyboard-accessible inputs and buttons
+- Visible focus states
+- Adequate color contrast
 
-Accessibility enhancements are limited to assignment scope.
 
 ## 9. Navigation Flow
 
-| Screen   | Navigation       |
+| Screen   | Navigates To     |
 | -------- | ---------------- |
 | Welcome  | Login / Register |
 | Login    | Account          |
 | Register | Account          |
 
-Navigation is handled using **react-router-dom**.
-
 
 ## 10. Code Quality Practices
 
-* Modular components
-* Clear file and folder naming
-* Meaningful comments where required
-* Conventional commit messages
-* No unnecessary dependencies
+- Modular and reusable components
+- Clear and consistent naming conventions
+- Minimal but meaningful comments
+- No unnecessary dependencies
+- Conventional Git commit messages
+
 
 ## 11. Deployment Plan
 
+- Build generated using Vite
+- Application to be deployed on **Vercel**
+- Public GitHub repository linked with deployment
 
 
-## 12. Pending Implementation
+## 12. Pending Tasks
 
-* Register Screen UI
-* Account Settings Screen UI
+- Final UI review against Adobe XD
+- Deployment to hosting platform
+- README update with live URL
 
 
 ## 13. Conclusion
 
-This implementation focuses on fulfilling the assignment requirements accurately by prioritizing UI correctness, navigation flow, and clean React code. The application is intentionally scoped to match the expectations of the qualifier task.
+This implementation focuses on accurately fulfilling the qualifier task by prioritizing UI correctness, navigation flow, and clean React code. The project is intentionally scoped to match the expectations of the assignment and avoid unnecessary over-engineering.
+
