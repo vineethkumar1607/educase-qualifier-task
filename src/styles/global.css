@@ -18,16 +18,21 @@
     Layout
   --------------------------------*/
   .page {
-    display: flex;
-    justify-content: center;
-  }
+  min-height: 100vh;   /* full height */
+  display: flex;
+  justify-content: center;
+  
+}
 
-  .mobile-container {
-    width: 375px;
-    min-height: 100vh;
-    background: #f7f7f7;
-     border: 1px solid #e0e0e0; /* subtle mobile frame */
-  }
+
+ .mobile-container {
+  width: 100%;        
+  max-width: 420px;   /* limit width on big screens */
+  min-height: 100vh;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+}
+
 
   .screen-padding {
   padding: 24px;
@@ -184,7 +189,7 @@
     position: absolute;
     top: -8px;
     left: 12px;
-    background: #ffffff;
+    background: #f7f7f7; 
     padding: 0 6px;
     font-size: 12px;
     font-weight: 500;
